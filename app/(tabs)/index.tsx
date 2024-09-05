@@ -1,70 +1,62 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import FirstScreen from '../../src/pages/First'
+import DersProgram from '../../src/pages/DersProgram/DersProgrami'
+import University360 from '../../src/pages/360University/360University'
+import BakiyeRezervasyon from '../../src/pages/BakiyeRezervasyon/BakiyeRezervasyon'
+import Belgeler from '../../src/pages/Belgeler/Belgeler'
+import CekGonder from '../../src/pages/CekGonder/CekGonder'
+import NotGoruntule from '../../src/pages/NotGoruntule/NotGoruntule'
+import OdeGec from '../../src/pages/OdeGec/OdeGec'
+import Rebis from '../../src/pages/REBIS/Rebis'
+import YemekMenu from '../../src/pages/YemekMenu/YemekMenu'
+import YoklamaAl from '../../src/pages/YoklamaAl/Yoklama'
+import CallPhone from '../../src/pages/AramaEkrani/CallPhone'
+import Login from '../../src/pages/GirisEkrani/Login'
+import KayitOl from '../../src/pages/GirisEkrani/KayitOl'
+import GirisYap from '../../src/pages/GirisEkrani/GirisYap'
+import DrawerMenu from '../../src/pages/DrawerNavigation/DrawerMenu'
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
-export default function HomeScreen() {
+function Root() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home" component={Root} />
+      <Drawer.Screen name="1" component={DrawerMenu} />
+
+    </Drawer.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+
+function App(){
+  return(
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+        <Stack.Screen name="GirisYap" component={GirisYap} options={{ headerShown: false }}/>
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+        <Stack.Screen name="FirstScreen" component={FirstScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="DersProgrami" component={DersProgram} options={{ headerShown: false }}/>
+        <Stack.Screen name="University360" component={University360} options={{ headerShown: false }}/>
+        <Stack.Screen name="BakiyeRezervasyon" component={BakiyeRezervasyon} options={{ headerShown: false }}/>
+        <Stack.Screen name="Belgeler" component={Belgeler} options={{ headerShown: false }}/>
+        <Stack.Screen name="CekGonder" component={CekGonder} options={{ headerShown: false }}/>
+        <Stack.Screen name="NotGoruntule" component={NotGoruntule} options={{ headerShown: false }}/>
+        <Stack.Screen name="OdeGec" component={OdeGec} options={{ headerShown: false }}/>
+        <Stack.Screen name="Rebis" component={Rebis} options={{ headerShown: false }}/>
+        <Stack.Screen name="YemekMenu" component={YemekMenu} options={{ headerShown: false }}/>
+        <Stack.Screen name="YoklamaAl" component={YoklamaAl} options={{ headerShown: false }}/>
+        <Stack.Screen name="CallPhone" component={CallPhone} options={{ headerShown: false }}/>
+        <Stack.Screen name="KayitOl" component={KayitOl} options={{ headerShown: false }}/>
+        <Stack.Screen name="Home" component={Root} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+    
+  )
+}
+
+export default App;

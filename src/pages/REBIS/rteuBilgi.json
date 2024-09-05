@@ -1,0 +1,27 @@
+[
+    {
+        "id":0,
+        "title":"Genel Bilgi",
+        "bilgi":"Recep Tayyip Erdoğan Üniversitesi (RTEÜ), 2006 yılında Rize’de kurulan ve adını 2012 yılında Türkiye Cumhurbaşkanı Recep Tayyip Erdoğan'dan alan bir devlet üniversitesidir. Üniversite, başlangıçta Karadeniz Teknik Üniversitesi'ne bağlı bir meslek yüksekokulu olarak başlamış, daha sonra bağımsız bir üniversite haline gelmiştir."
+    },
+    {
+        "id":1,
+        "title":"Yerleşim ve Kampüsler",
+        "bilgi":"Rize'de bulunan üniversite, şehir merkezinde yer alan kampüsleriyle öğrencilere hizmet vermektedir. Üniversitenin çeşitli fakülteleri ve araştırma merkezleri, Rize'nin farklı bölgelerinde yer almaktadır."
+    },
+    {
+        "id":2,
+        "title":"Akademik Başarılar",
+        "bilgi":"RTEÜ, özellikle sağlık ve mühendislik alanlarında güçlü akademik programlara sahip olup, kimya, çevre bilimleri ve mühendislik gibi alanlarda Türkiye ve dünyada belirli sıralamalara girmiştir. Örneğin, kimya alanında Türkiye’de 59., dünya genelinde ise 2428. sırada yer almaktadır."
+    },
+    {
+        "id":3,
+        "title":"Araştırma ve Yayınlar",
+        "bilgi":"Üniversitenin araştırma faaliyetleri oldukça aktif olup, çok sayıda akademik yayın ve alıntı ile küresel akademik toplulukta kendine yer edinmiştir. Özellikle çevre bilimleri, mühendislik ve sosyal bilimler gibi alanlarda önemli çalışmalar yapılmaktadır."
+    },
+    {
+        "id":4,
+        "title":"Uluslararası İlişkiler",
+        "bilgi":"RTEÜ, uluslararası öğrenci kabulü ve değişim programları ile de dikkat çekmektedir. Üniversite, Asya ve Avrupa’daki üniversitelerle çeşitli işbirliklerine sahiptir ve bu sayede öğrencilere küresel bir perspektif sunmaktadır."
+    }
+]
